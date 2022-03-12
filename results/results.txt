@@ -1,0 +1,117 @@
+-------------------------
+payment_amorphous_uri
+
+Type: amorphous_uri, Offender: paths./charges-.xml
+Type: amorphous_uri, Offender: paths./charges/{charge_id}-.xml
+Type: amorphous_uri, Offender: paths./charges/{charge_id}.xml
+Type: amorphous_uri, Offender: paths./charges/{charge_id}_.xml
+
+METRICS
+
+Expected: 4
+Detected: 4
+-------------------------
+project_management_sensitive_info_pqs
+
+Type: sensitive_info_pqs, Offender: paths./projects/{project_id}.get.parameters.token
+
+METRICS
+
+Expected: 1
+Detected: 1
+-------------------------
+project_management_amorphous_uri
+
+Type: amorphous_uri, Offender: paths./projects-.xml
+Type: amorphous_uri, Offender: paths./projects/{project_id}-.xml
+Type: amorphous_uri, Offender: paths./projects/{project_id}.xml
+Type: amorphous_uri, Offender: paths./projects/{project_id}_.xml
+
+METRICS
+
+Expected: 4
+Detected: 4
+-------------------------
+incident_response_amorphous_uri
+
+Type: amorphous_uri, Offender: paths./incidents-.xml
+Type: amorphous_uri, Offender: paths./incidents/{incident_id}-.xml
+Type: amorphous_uri, Offender: paths./incidents/{incident_id}.xml
+Type: amorphous_uri, Offender: paths./incidents/{incident_id}_.xml
+
+METRICS
+
+Expected: 4
+Detected: 4
+-------------------------
+payment_crudy_uri
+
+Type: crudy_uri, Offender: paths./delete_charges/{charge_id}
+Type: amorphous_uri, Offender: paths./author_charges
+Type: amorphous_uri, Offender: paths./fetch_charges/{charge_id}
+Type: amorphous_uri, Offender: paths./delete_charges/{charge_id}
+
+METRICS
+
+Expected: 4
+Detected: 1
+
+ANTIPATTERNS EXPECTED, BUT NOT DETECTED
+
+crudy_uri at paths./author_charges
+crudy_uri at paths./fetch_charges/{charge_id}
+crudy_uri at paths./renew-charges/{charge_id}
+-------------------------
+incident_response_crudy_uri
+
+Type: crudy_uri, Offender: paths./delete_incidents/{incident_id}
+Type: amorphous_uri, Offender: paths./author_incidents
+Type: amorphous_uri, Offender: paths./fetch_incidents/{incident_id}
+Type: amorphous_uri, Offender: paths./delete_incidents/{incident_id}
+
+METRICS
+
+Expected: 4
+Detected: 1
+
+ANTIPATTERNS EXPECTED, BUT NOT DETECTED
+
+crudy_uri at paths./author_incidents
+crudy_uri at paths./fetch_incidents/{incident_id}
+crudy_uri at paths./renew-incidents/{incident_id}
+-------------------------
+project_management_crudy_uri
+
+Type: crudy_uri, Offender: paths./delete_projects/{project_id}
+Type: amorphous_uri, Offender: paths./author_projects
+Type: amorphous_uri, Offender: paths./fetch_projects/{project_id}
+Type: amorphous_uri, Offender: paths./delete_projects/{project_id}
+
+METRICS
+
+Expected: 4
+Detected: 1
+
+ANTIPATTERNS EXPECTED, BUT NOT DETECTED
+
+crudy_uri at paths./author_projects
+crudy_uri at paths./fetch_projects/{project_id}
+crudy_uri at paths./renew-projects/{project_id}
+-------------------------
+payment_sensitive_info_pqs
+
+Type: sensitive_info_pqs, Offender: paths./charges/{charge_id}.get.parameters.token
+
+METRICS
+
+Expected: 1
+Detected: 1
+-------------------------
+incident_response_sensitive_info_pqs
+
+Type: sensitive_info_pqs, Offender: paths./incidents/{incident_id}.get.parameters.token
+
+METRICS
+
+Expected: 1
+Detected: 1
